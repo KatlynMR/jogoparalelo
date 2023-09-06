@@ -14,6 +14,9 @@ public class MovimentoDoTiro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      transform.Translate(Vector3.right * velocTiro * Time.deltaTime);  
+      transform.Translate(Vector3.right * velocTiro * Time.deltaTime); 
+        if (transform.position.x > 9.0f) {
+        Destroy(this.gameObject);
+        }
     }
 }
